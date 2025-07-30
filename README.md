@@ -13,7 +13,8 @@ htmlファイルに、
         <button type="button" id="Btn2">ポーズ</button>
         <button type="button" id="Btn3">リスタート</button>
         <button type="button" id="Btn4">リセット</button>
-        <div id="clock"></div>`
+        <div id="clock"></div>
+        <script type="module" src="https://cdn.jsdelivr.net/gh/ShisakankoY/New-countdownTimer/Main.js"></script>`
 を追加してください。
 
 ## ファイル構成
