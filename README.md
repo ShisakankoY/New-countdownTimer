@@ -17,7 +17,7 @@ htmlファイルに以下を追加してください。
 <button type="button" id="Btn4">リセット</button>
 <div id="clock"></div>
 <script type="module" src="https://cdn.jsdelivr.net/gh/ShisakankoY/New-countdownTimer/Main.js"></script>
-
+```
 
 ## ファイル構成
 
