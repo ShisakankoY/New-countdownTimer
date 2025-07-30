@@ -12,9 +12,25 @@ function timer() {
             return;
         }
         push = true;
-        let hour = Number(prompt("時・分・秒のうち、時を入力してください"));
-        let min = Number(prompt("分を入力してください"));
-        let sec = Number(prompt("秒を入力してください"));
+        let hourInput = prompt("時・分・秒のうち、時を入力してください");
+        if (hourInput === null) {
+            push = false;
+            return;
+        }
+        let minInput = prompt("分を入力してください");
+        if (minInput === null) {
+            push = false;
+            return;
+        }
+        let secInput = prompt("秒を入力してください");
+        if (secInput === null) {
+            push = false;
+            return;
+        }
+
+        let hour = Number(hourInput);
+        let min = Number(minInput);
+        let sec = Number(secInput);
 
         if (isNaN(hour) || isNaN(min) || isNaN(sec)) {
             alert("数値を半角で入力してください");
@@ -50,7 +66,6 @@ function timer() {
     Btn2.addEventListener('click', () => {
         clearInterval(intervalId);
         intervalId = null;
-        push = false;
     });
 
     Btn3.addEventListener('click', () => {
