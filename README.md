@@ -21,6 +21,8 @@ htmlファイルに以下を追加してください。
 
 ## ファイル構成
 
-- `index.html`
-- `Main.js`  
-- `Module.js`
+New-countdownTimer/
+├── LICENSE          
+├── index.html
+├── Main.js
+└── Module.js
