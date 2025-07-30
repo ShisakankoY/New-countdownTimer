@@ -8,14 +8,16 @@
 2. 時間をセットしたらカウントダウンが始まります。  
 3. 一時停止・再開・リセットも可能です。
 
-htmlファイルに、
-```<button type="button" id="Btn1">スタート</button>```
-```<button type="button" id="Btn2">ポーズ</button>```
-`<button type="button" id="Btn3">リスタート</button>```
-```<button type="button" id="Btn4">リセット</button>```
-```<div id="clock"></div>```
-```<script type="module" src="https://cdn.jsdelivr.net/gh/ShisakankoY/New-countdownTimer/Main.js"></script>```
-を追加してください。
+htmlファイルに以下を追加してください。
+
+```
+<button type="button" id="Btn1">スタート</button>
+<button type="button" id="Btn2">ポーズ</button>
+<button type="button" id="Btn3">リスタート</button>
+<button type="button" id="Btn4">リセット</button>
+<div id="clock"></div>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ShisakankoY/New-countdownTimer/Main.js"></script>
+
 
 ## ファイル構成
 
