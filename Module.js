@@ -46,6 +46,11 @@ function timer() {
         }
 
         let time = hour * 3600 + min * 60 + sec;
+        if (time <= 0) {
+            alert("0秒以上の時間を設定してください");
+            push = false;
+            return;
+        }
         intervalId = setInterval(() => {
             time--;
             nowTime = time;
