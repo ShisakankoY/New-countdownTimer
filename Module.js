@@ -12,38 +12,48 @@ function timer() {
             return;
         }
         push = true;
-        let hourInput = prompt("時・分・秒のうち、時を入力してください");
-        if (hourInput === null) {
-            push = false;
-            return;
+
+        let hourInput, minInput, secInput;
+
+        while (true) {
+            hourInput = prompt("時を入力してください(0以上の半角数字)");
+            if (hourInput === null) {
+                push = false;
+                return;
+            }
+            if (!isNaN(hourInput) && Number(hourInput) >= 0) {
+                break;
+            }
+            alert("時は0以上の半角数字で入力してください");
         }
-        let minInput = prompt("分を入力してください");
-        if (minInput === null) {
-            push = false;
-            return;
+
+        while (true) {
+            minInput = prompt("分を入力してください(0~59の半角数字)");
+            if (minInput === null) {
+                push = false;
+                return;
+            }
+            if (!isNaN(minInput) && Number(minInput) >= 0 && Number(minInput) <= 59) {
+                break;
+            }
+            alert("分は0~59の半角数字で入力してください");
         }
-        let secInput = prompt("秒を入力してください");
-        if (secInput === null) {
-            push = false;
-            return;
+
+        while (true) {
+            secInput = prompt("秒を入力してください(0~59の半角数字)");
+            if (secInput === null) {
+                push = false;
+                return;
+            }
+            if (!isNaN(secInput) && Number(secInput) >= 0 && Number(secInput) <= 59) {
+                break;
+            }
+            alert("秒は0~59の半角数字で入力してください");
         }
 
         let hour = Number(hourInput);
         let min = Number(minInput);
         let sec = Number(secInput);
-
-        if (isNaN(hour) || isNaN(min) || isNaN(sec)) {
-            alert("数値を半角で入力してください");
-            alert("一度終了します");
-            push = false;
-            return;
-        }
-
-        if (hour < 0 || min < 0 || min > 59 || sec < 0 || sec > 59) {
-            alert("時は0以上, 分・秒は0~59の範囲で入力してください");
-            push = false;
-            return;
-        }
 
         let time = hour * 3600 + min * 60 + sec;
         if (time <= 0) {
